@@ -19,7 +19,7 @@
                                 <label for="name" >Name</label> <input type="text" th:field="*{name}"  id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" ></span>
                             </div>
                             <div>
-                                <label for="email" >Gender</label> <input type="text" th:field="*{gender}"  id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" ></span>
+                                <label for="geder" >Gender</label> <input type="text" th:field="*{gender}"  id="gender" placeholder="Gender Male Female Others"> <span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" ></span>
                             </div>
 
                             <div>
@@ -27,7 +27,7 @@
                             </div>
 
                             <div>
-                                <input type="submit" value="Add Student">
+                                <input type="submit" value="Add Patient">
                             </div>
 
                             <div></div>
