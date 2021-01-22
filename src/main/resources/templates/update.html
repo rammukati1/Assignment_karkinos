@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+ 
+    <title>Update User</title>
+  </head>
+
+<body>
+    <div>
+        <h3> Update Patient</h3>
+        <div >
+            <div >
+                <div>
+                    <form action="#" th:action="@{/update/{id}(id=${patient.id})}" th:object="${patient}" method="post">
+                        <div >
+                            <div>
+                                <label for="name" class="col-form-label">Name</label> <input type="text" th:field="*{name}" class="form-control" id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></span>
+                            </div>
+                            <div >
+                                <label for="gender" class="col-form-label">gender</label> <input type="text" th:field="*{gender}" class="form-control" id="gender" placeholder="gender"> <span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" class="text-danger"></span>
+                            </div>
+                            <div>
+                                <label for="phoneNo" class="col-form-label">Phone No</label> <input type="text" th:field="*{mobileNo}" class="form-control" id="mobileNo" placeholder="mobileNo"> <span th:if="${#fields.hasErrors('mobileNo')}" th:errors="mobileNo" class="text-danger"></span>
+                            </div>
+
+                            <div>
+                                <input type="submit" class="btn btn-primary" value="Update Student">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

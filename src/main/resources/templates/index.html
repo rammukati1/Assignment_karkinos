@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Patient data</title>
+
+
+ 
+</head>
+<body>
+
+ <div>
+ <h1>Patient List</h1>
+ 
+  <table border="1">
+   <thead>
+    <tr>
+     <th>Patient Name</th>
+     <th>Patient Gender</th>
+     <th>Patient Phone No</th>
+     <th>Update Info</th>
+     <th>Delete Patient</th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr th:each="patient : ${listPatients}">
+     <td th:text="${patient.name}"></td>
+     <td th:text="${patient.gender}"></td>
+     <td th:text="${patient.mobileNo}"></td>
+     <td><a th:href="@{/edit/{id}(id=${patient.id})}" class="btn btn-primary">update<i class="fas fa-user-edit ml-2"></i></a> </td>
+     <td><a th:href="@{/delete/{id}(id=${patient.id})}" class="btn btn-primary"> delete<i class="fas fa-user-times ml-2"></i></a></td>
+    </tr>
+   </tbody>
+  </table>
+ </div>
+</body>
+</html>

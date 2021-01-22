@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  
+    <title>Add User</title>
+   
+</head>
+
+<body>
+    <div >
+        <h3> Add Patient</h3>
+        <div >
+            <div>
+                <div>
+                    <form action="#" th:action="@{/addData}" th:object="${patients}" method="post">
+                        <div >
+                            <div>
+                                <label for="name" >Name</label> <input type="text" th:field="*{name}"  id="name" placeholder="Name"> <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}" ></span>
+                            </div>
+                            <div>
+                                <label for="email" >Gender</label> <input type="text" th:field="*{gender}"  id="email" placeholder="Email"> <span th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}" ></span>
+                            </div>
+
+                            <div>
+                                <label for="phoneNo">Phone No</label> <input type="text" th:field="*{mobileNo}" class="form-control" id="phoneNo" placeholder="PhoneNo"> <span th:if="${#fields.hasErrors('mobileNo')}" th:errors="*{mobileNo}" class="text-danger"></span>
+                            </div>
+
+                            <div>
+                                <input type="submit" value="Add Student">
+                            </div>
+
+                            <div></div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
